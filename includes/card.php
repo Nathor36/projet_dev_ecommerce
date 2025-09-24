@@ -1,0 +1,26 @@
+<?php
+
+$produits = [
+ ['nom' => 'iPhone 32 Pro', 'prix' => 1229, 'image' => 'C.jpg', 'description' => 'Smartphone haut de gamme', 'categorie' => 'smartphone'],
+ ['nom' => 'MacBook Air M2', 'prix' => 1499, 'image' => 'A.jpg', 'description' => 'Portable ultra-fin', 'categorie' => 'ordinateur'],
+ ['nom' => 'AirPods Pro', 'prix' => 279, 'image' => 'E.jpg', 'description' => 'Écouteurs sans fil', 'categorie' => 'accessoire'],
+ ['nom' => 'iPad Air', 'prix' => 699, 'image' => 'F.jpg', 'description' => 'Tablette polyvalente', 'categorie' => 'tablette'],
+ ['nom' => 'Apple Watch', 'prix' => 449, 'image' => 'D.jpg', 'description' => 'Montre connectée', 'categorie' => 'accessoire'],
+ ['nom' => 'Mac Studio', 'prix' => 2299, 'image' => 'B.jpg', 'description' => 'Station ultra-puissante', 'categorie' => 'ordinateur'],
+];
+
+function createCard($nom, $prix, $image, $description, $categorie)
+{
+return "
+<div class='product-card'>
+<img src='../includes/images/$image' alt='$nom' class='card-image'>
+<div class='card-content'>
+<h3 class='card-title'>$nom</h3>
+<p class='card-description'>$description</p>
+<p class='card-category'>Catégorie: $categorie</p>
+<div class='card-price'>$prix €</div>
+
+<button class='btn-acheter'>Ajouter au panier</button>
+</div>
+</div>";
+}
