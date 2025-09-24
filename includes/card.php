@@ -13,7 +13,7 @@ function createCard($nom, $prix, $image, $description, $categorie)
 {
 return "
 <div class='product-card'>
-<img src='../includes/images/$image' alt='$nom' class='card-image'>
+<img src='../projet_dev_ecommerce/images/$image' alt='$nom' class='card-image'>
 <div class='card-content'>
 <h3 class='card-title'>$nom</h3>
 <p class='card-description'>$description</p>
