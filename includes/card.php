@@ -1,11 +1,11 @@
 <?php
 
 $produits = [
- ['nom' => 'iPhone 32 Pro', 'prix' => 1229, 'image' => 'C.jpg', 'description' => 'Smartphone haut de gamme', 'categorie' => 'smartphone'],
- ['nom' => 'MacBook Air M2', 'prix' => 1499, 'image' => 'A.jpg', 'description' => 'Portable ultra-fin', 'categorie' => 'ordinateur'],
+ ['nom' => 'iPhone 32 Pro', 'prix' => 1449, 'image' => 'C.jpg', 'description' => 'Smartphone haut de gamme', 'categorie' => 'smartphone'],
+ ['nom' => 'MacBook Air M2', 'prix' => 2036, 'image' => 'A.jpg', 'description' => 'Portable ultra-fin', 'categorie' => 'ordinateur'],
  ['nom' => 'AirPods Pro', 'prix' => 279, 'image' => 'E.jpg', 'description' => 'Écouteurs sans fil', 'categorie' => 'accessoire'],
  ['nom' => 'iPad Air', 'prix' => 699, 'image' => 'F.jpg', 'description' => 'Tablette polyvalente', 'categorie' => 'tablette'],
- ['nom' => 'Apple Watch', 'prix' => 449, 'image' => 'D.jpg', 'description' => 'Montre connectée', 'categorie' => 'accessoire'],
+ ['nom' => 'Rolex Apple Watch', 'prix' => 44449, 'image' => 'D.jpg', 'description' => 'Montre connectée', 'categorie' => 'accessoire'],
  ['nom' => 'Mac Studio', 'prix' => 2299, 'image' => 'B.jpg', 'description' => 'Station ultra-puissante', 'categorie' => 'ordinateur'],
 ];
 
