@@ -1,3 +1,5 @@
+<!-- filepath: /Applications/MAMP/htdocs/projet_dev_ecommerce/contact.php -->
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -22,8 +24,10 @@
                     <h2>Nos coordonnées</h2>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> 123 Rue Exemple, Paris, France</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 av des champs elysée, Paris, France</li>
                         <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
                         <li><i class="fas fa-envelope"></i> contact@exemple.com</li>
+                        <li><i class="fas fa-envelope"></i> Haappel@contact.com</li>
                     </ul>
                 </div>
 
@@ -57,6 +61,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2023 Votre Entreprise. Tous droits réservés.</p>
+            <p>&copy; 2025 Votre Entreprise. Tous droits sortis du passé.</p>
         </div>
     </footer>
 </body>
