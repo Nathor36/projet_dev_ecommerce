@@ -23,10 +23,8 @@
                 <div class="contact-info">
                     <h2>Nos coordonnées</h2>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue Exemple, Paris, France</li>
                         <li><i class="fas fa-map-marker-alt"></i> 123 av des champs elysée, Paris, France</li>
                         <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
-                        <li><i class="fas fa-envelope"></i> contact@exemple.com</li>
                         <li><i class="fas fa-envelope"></i> Haappel@contact.com</li>
                     </ul>
                 </div>
