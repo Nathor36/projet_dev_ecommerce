@@ -188,3 +188,32 @@ img.card-image {
 .navbar nav ul li a:hover {
   color: lightblue; 
 }
+
+
+.panier-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.panier-produits {
+  display: flex;
+  flex-wrap: wrap;     /* les articles passent à la ligne si pas assez de place */
+  justify-content: center;
+  gap: 20px;           /* espace entre les articles */
+  margin-top: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px;         /* taille de la carte */
+  text-align: center;
+}
+.product-card img {
+  width: 100px;         /* taille de l'image */
+  height: auto;
+  margin-bottom: 10px;
+}
