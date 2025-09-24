@@ -1,39 +1,63 @@
-<div>
-        <label class="block text-sm font-medium leading-6 text-gray-900 required" for="form_name">Votre nom</label>
-        <div class="mt-2">
-            <input type="text" id="form_name" name="form[name]" required="required" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" />
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <link rel="stylesheet" href="style.contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Nous sommes là pour répondre à toutes vos questions. Remplissez le formulaire ci-dessous ou utilisez les informations de contact pour nous joindre.</p>
         </div>
+    </header>
 
-            </div>
-
-                    <div>
-        <label class="block text-sm font-medium leading-6 text-gray-900 required" for="form_email">Votre e-mail</label>
-        <div class="mt-2">
-            <input type="text" id="form_email" name="form[email]" required="required" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" />
-        </div>
-
-            </div>
-
-                    <div>
-        <label class="block text-sm font-medium leading-6 text-gray-900 required" for="form_subject">Objet du message</label>
-        <div class="mt-2">
-            <input type="text" id="form_subject" name="form[subject]" required="required" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" />
-        </div>
-
-            </div>
-
-                    <div>
-        <label class="block text-sm font-medium leading-6 text-gray-900 required" for="form_message">Votre message</label>
-        <div class="mt-2">
-            <textarea id="form_message" name="form[message]" required="required" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6"></textarea>
-        </div>
-
-            </div>
-
-                <div class="text-right mt-4">
-                    <button type="submit" class="submit-btn">Envoyer</button>
+    <main class="main-content">
+        <div class="container">
+            <div class="contact-section">
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <h2>Nos coordonnées</h2>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue Exemple, Paris, France</li>
+                        <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                        <li><i class="fas fa-envelope"></i> contact@exemple.com</li>
+                    </ul>
                 </div>
-                <input type="hidden" id="form__token" name="form[_token]" value="FjkKIqio9MWlpWfWgzuy7JEfMEXvaJkrkvpx06ok-Yc" /></form>
-                    </div>
-    </div>
-</div>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form">
+                    <h2>Envoyez-nous un message</h2>
+                    <form action="submit_contact.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Votre e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Objet</label>
+                            <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Votre Entreprise. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
