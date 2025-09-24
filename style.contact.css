@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: lightblue;
     color: #333;
     line-height: 1.6;
 }
@@ -18,11 +18,11 @@ body {
 
 /* Header */
 .header {
-    background-color: #007BFF;
+    background-color: black;
     color: #fff;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
-    border-bottom: 5px solid #0056b3;
+    border-bottom: 5px solid lightblue;
 }
 
 .header h1 {
@@ -57,7 +57,7 @@ body {
 .contact-info h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #007BFF;
+    color: lightblue;
 }
 
 .contact-info ul {
@@ -74,7 +74,7 @@ body {
 
 .contact-info ul li i {
     margin-right: 10px;
-    color: #007BFF;
+    color: lightblue;
     font-size: 18px;
 }
 
@@ -91,7 +91,7 @@ body {
 .contact-form h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #007BFF;
+    color: lightblue;
 }
 
 .form-group {
@@ -121,7 +121,7 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #007BFF;
+    border-color: lightblue;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     outline: none;
 }
@@ -135,7 +135,7 @@ textarea {
 .submit-btn {
     display: inline-block;
     padding: 12px 20px;
-    background-color: #007BFF;
+    background-color: lightblue;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -146,7 +146,7 @@ textarea {
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+    background-color: lightblue;
     transform: scale(1.05);
 }
 
