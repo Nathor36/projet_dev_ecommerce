@@ -43,8 +43,9 @@ img.card-image1 {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  width: 150px;
-  display: auto;
+  width: 300px;
+  height: 200px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -53,7 +54,8 @@ img.card-image2 {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  width: 150px;
+  width: 300px;
+  height: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -101,12 +103,11 @@ img.card-image2 {
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  padding: 40px 30px;
-  position: sticky; 
+  padding: 40px 30px; 
   top: 0;
   z-index: 1000;
 }
-
+x
 
 
 /* Header */
@@ -215,11 +216,7 @@ img.card-image2 {
   width: 300px;         /* taille de la carte */
   text-align: center;
 }
-.product-card img {
-  width: 300px;         /* taille de l'image */
-  height: auto;
-  margin-bottom: 10px;
-}
+
 
 
     /* Affichage des descriptions sous les images */
@@ -255,4 +252,37 @@ img.card-image2 {
   padding: 10px;
   margin-top: 10px;            
   text-align: center;           
+}
+
+.bouton-achat {
+  background-color: lightblue;  /* couleur du bouton */
+  color: white;                 /* couleur du texte */
+  padding: 10px 20px;           /* espace autour du texte */
+  border: none;                 /* pas de bordure */
+  border-radius: 5px;           /* coins arrondis */
+  cursor: pointer;              /* curseur en main */
+  font-size: 16px;
+  transition: background 0.3s;  /* effet au survol */
+}
+
+.bouton-achat:hover {
+  background-color: green ; /* couleur au survol */
+}
+
+
+
+
+.titlePanier {
+    text-align: center;
+    padding: 60px 20px;
+    
+}
+
+.titlePanier h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.titlePanier.header {
+    background-color: black;
 }
