@@ -45,6 +45,8 @@ if (!isset($_SESSION['panier'])) {
 
   <div class="panier-produits">
   
+  <div class="baseproduct-card">
+
   <div class="product-card">
       <h3 class="card-title">Article 1</h3>
         
