@@ -35,12 +35,13 @@ if (!isset($_SESSION['panier'])) {
   
   <h1>Mon Panier</h1>
 
-
+</div>
 
 </body>
 
   <main class="panier-body">
-  <h1>Mes Articles</h1>
+
+  <h2>Mes Articles</h2>
 
   <div class="panier-produits">
   
@@ -61,7 +62,7 @@ if (!isset($_SESSION['panier'])) {
         <button class="bouton-achat">Clique-moi</button>
     </div>
 
-    <!-- Article 2 -->
+ 
     <div class="product-card">
         <h3 class="card-title">Article 2</h3>
 

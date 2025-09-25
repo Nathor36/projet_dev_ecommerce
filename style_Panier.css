@@ -25,12 +25,13 @@ body {
 h1 {
   color: white;
   text-align: center;
+  
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 20px;
-    color: lightblue;
+    color: black;
 }
 
 img, image {
@@ -99,7 +100,6 @@ img.card-image2 {
 .navbar {
   background-color: #000;   
   color: white;
-  border-bottom: 5px solid lightblue;
   display: flex;
   justify-content: space-between; 
   align-items: center;
@@ -110,10 +110,10 @@ img.card-image2 {
 x
 
 
-/* Header */
+
 .header {
     background-color: lightblue;
-    color: #fff;
+    color: #000000;
     padding: 40px 20px;
     text-align: center;
     border-bottom: 5px solid lightblue;
@@ -167,9 +167,8 @@ x
   z-index: 3000;
 }
 
-
 .navbar .logo {
-  font-size: 35px;
+  font-size: 45px;
   font-weight: bold;
 }
 
@@ -185,7 +184,7 @@ x
   color: white;
   text-decoration: none;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 30px;
   transition: color 0.3s;
 }
 
@@ -197,6 +196,7 @@ x
 .panier-body {
   padding: 20px;
   text-align: center;
+  color: rgb(255, 255, 255);
 }
 
 .panier-produits {
@@ -275,11 +275,11 @@ x
 .titlePanier {
     text-align: center;
     padding: 60px 20px;
-    
+    background-color: black;
 }
 
 .titlePanier h1 {
-    font-size: 42px;
+    font-size: 60px;
     margin-bottom: 20px;
 }
 
