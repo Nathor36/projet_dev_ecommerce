@@ -20,5 +20,6 @@
 <?php foreach($produits as $produit): ?> 
  <div class="card"> 
  <?= createCard($produit['nom'], $produit['prix'], $produit['image'], $produit['description'], $produit['categorie']) ?>
- </div>
+ <?= createCard($produit['nom'], $produit['prix'], $produit['image'], $produit['description'], $produit['categorie']) ?>
+</div>
 <?php endforeach; ?> 
