@@ -45,7 +45,7 @@ nav.navbar {
 
 .navbar ul li a:hover,
 .navbar ul li a.active {
-    color: #00cfff;
+    color: lightblue;
 }
 
 .navbar i {
@@ -154,7 +154,7 @@ nav.navbar {
 }
 
 .submit-btn:hover {
-    background: #00aacc;
+    background: lightblue;
 }
 
 
