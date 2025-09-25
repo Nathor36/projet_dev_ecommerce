@@ -8,9 +8,9 @@ $produits = [
  ['nom' => 'Rolex Apple Watch', 'prix' => 44449, 'image' => 'D.jpg', 'description' => 'Montre connectée', 'categorie' => 'accessoire'],
  ['nom' => 'haarppel fortuna watch', 'prix' => 147450, 'image' => 'G.jpg' , 'description' => 'montre de luxe', 'categorie' => 'accessoire'],
  ['nom' => 'Mac Studio', 'prix' => 2299, 'image' => 'B.jpg', 'description' => 'Station ultra-puissante', 'categorie' => 'ordinateur'],
- ['nom' => 'haarpods' , 'prix' => 1100, 'image' => 'H.jpeg' , 'description' => 'ecouteurs derniere generation', 'categrogie' => 'accessoires'],
- ['nom' => 'iphone 64 mini' , 'prix' => 2100, 'image' => 'i.webp' , 'description' => 'telephone derniere generation', 'categrogie' => 'smartphone'],
- ['nom' => 'ipad KIDIZOOM' , 'prix' => 100, 'image' => 'j.jpg' , 'description' => 'tablette du peuple', 'categrogie' => 'tablette'],
+ ['nom' => 'haarpods' , 'prix' => 1100, 'image' => 'H.jpeg' , 'description' => 'ecouteurs derniere generation', 'categorie' => 'accessoires'],
+ ['nom' => 'iphone 64 mini' , 'prix' => 2100, 'image' => 'i.webp' , 'description' => 'telephone derniere generation', 'categorie' => 'smartphone'],
+ ['nom' => 'ipad KIDIZOOM' , 'prix' => 100, 'image' => 'j.jpg' , 'description' => 'tablette du peuple', 'categorie' => 'tablette'],
 ];
 
 function createCard($nom, $prix, $image, $description, $categorie)
