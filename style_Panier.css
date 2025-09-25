@@ -27,6 +27,12 @@ h1 {
   text-align: center;
 }
 
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: lightblue;
+}
+
 img, image {
   display: block;
   margin-left: auto;
@@ -85,7 +91,7 @@ img.card-image {
 .navbar {
   background-color: #000;   
   color: white;
-  border-bottom: 5px solid #0056b3;
+  border-bottom: 5px solid lightblue;
   display: flex;
   justify-content: space-between; 
   align-items: center;
@@ -99,11 +105,11 @@ img.card-image {
 
 /* Header */
 .header {
-    background-color: #007BFF;
+    background-color: lightblue;
     color: #fff;
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 5px solid #0056b3;
+    border-bottom: 5px solid lightblue;
 }
 
 .header h1 {
