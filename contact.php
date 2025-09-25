@@ -9,13 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header class="header">
-        <div class="container">
+        <nav class="navbar">
+            <div class="logo">Ma Boutique</div>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="produits.php">Produits</a></li>
+                <li><a href="contact.php" class="active">Contact</a></li>
+                <li><a href="PagePanier.php"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+        <div class="container header-content">
             <h1>Contactez-nous</h1>
             <p>Nous sommes là pour répondre à toutes vos questions. Remplissez le formulaire ci-dessous ou utilisez les informations de contact pour nous joindre.</p>
         </div>
     </header>
 
+    <!-- MAIN -->
     <main class="main-content">
         <div class="container">
             <div class="contact-section">
@@ -23,13 +34,13 @@
                 <div class="contact-info">
                     <h2>Nos coordonnées</h2>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 av des champs elysée, Paris, France</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 av des Champs-Élysées, Paris, France</li>
                         <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
                         <li><i class="fas fa-envelope"></i> Haappel@contact.com</li>
                     </ul>
                 </div>
 
-                <!-- Formulaire de contact -->
+                <!-- Formulaire -->
                 <div class="contact-form">
                     <h2>Envoyez-nous un message</h2>
                     <form action="submit_contact.php" method="POST">
@@ -56,9 +67,10 @@
         </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Votre Entreprise. Tous droits sortis du passé.</p>
+            <p>&copy; 2025 Votre Entreprise. Tous droits réservés.</p>
         </div>
     </footer>
 </body>
