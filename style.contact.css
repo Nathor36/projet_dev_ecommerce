@@ -1,4 +1,4 @@
-/* ======== GLOBAL ======== */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@ body {
     margin: auto;
 }
 
-/* ======== NAVBAR ======== */
+
 nav.navbar {
     background-color: #000;
     display: flex;
@@ -53,7 +53,7 @@ nav.navbar {
     color: #fff;
 }
 
-/* ======== HEADER ======== */
+
 .header-content {
     text-align: center;
     padding: 60px 20px;
@@ -74,7 +74,7 @@ nav.navbar {
     background-color: black;
 }
 
-/* ======== CONTACT SECTION ======== */
+
 .contact-section {
     display: flex;
     flex-wrap: wrap;
@@ -111,7 +111,7 @@ nav.navbar {
     color: lightblue;
 }
 
-/* ======== FORM ======== */
+
 .form-group {
     margin-bottom: 15px;
 }
@@ -154,7 +154,7 @@ nav.navbar {
     background: #00aacc;
 }
 
-/* ======== FOOTER ======== */
+
 .footer {
     background: #000;
     text-align: center;

@@ -44,15 +44,32 @@ if (!isset($_SESSION['panier'])) {
   <div class="panier-produits">
     <!-- Article 1 -->
     <div class="product-card">
-      <img src="images/a.jpg" alt="Article 1" class="card-image">
       <h3 class="card-title">Article 1</h3>
-      <p class="card-price">350 €</p>
+        
+      <img src="images/a.jpg" alt="Article 1" class="card-image1">
+        
+        <p class="card-description1">Mackbook Air M2.</p>
+        <p class="card-description1">16GB RAM, 512GB SSD</p>
+        <p class="card-description1">Couleur: Gris Sidéral</p>
+        <p class="card-description1">Processeur: Apple M2</p>
+        <p class="card-description1">Écran: 13.6 pouces Retina</p>
+      
+
+        <p class="card-price">350 €</p>
     </div>
 
     <!-- Article 2 -->
     <div class="product-card">
         <h3 class="card-title">Article 2</h3>
-      <img src="images/b.jpg" alt="Article 2" class="card-image">
+
+      <img src="images/b.jpg" alt="Article 2" class="card-image2">
+
+      <p class="card-description2">Mackbook Air M2.</p>
+        <p class="card-description2">16GB RAM, 512GB SSD</p>
+        <p class="card-description2">Couleur: Gris Sidéral</p>
+        <p class="card-description2">Processeur: Apple M2</p>
+        <p class="card-description2">Écran: 13.6 pouces Retina</p>
+      
 
       <p class="card-price">499 €</p>
     </div>
