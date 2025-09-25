@@ -1,169 +1,165 @@
-/* Style général */
+/* ======== GLOBAL ======== */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
     background-color: lightblue;
-    color: #333;
+    color: #fff;
     line-height: 1.6;
 }
 
-/* Conteneur principal */
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: auto;
 }
 
-/* Header */
-.header {
-    background-color: black;
+/* ======== NAVBAR ======== */
+nav.navbar {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
     color: #fff;
-    padding: 20px 20px;
-    text-align: center;
-    border-bottom: 5px solid lightblue;
 }
 
-.header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.header p {
-    font-size: 18px;
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
     margin: 0;
+    padding: 0;
 }
 
-/* Section principale */
-.main-content {
-    padding: 40px 0;
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #00cfff;
+}
+
+.navbar i {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* ======== HEADER ======== */
+.header-content {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #000;
+}
+
+.header-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.header-content p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.header.header {
+    background-color: black;
+}
+
+/* ======== CONTACT SECTION ======== */
+.contact-section {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: space-between;
+    margin: 50px 0;
 }
 
-/* Informations de contact */
-.contact-info {
-    flex: 1;
-    min-width: 300px;
-    background-color: #fff;
+.contact-info, .contact-form {
+    flex: 1 1 45%;
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #000;
 }
 
-.contact-info h2 {
-    font-size: 24px;
+.contact-info h2,
+.contact-form h2 {
     margin-bottom: 20px;
     color: lightblue;
 }
 
-.contact-info ul {
+.contact-info ul {  
     list-style: none;
     padding: 0;
 }
 
 .contact-info ul li {
-    margin-bottom: 15px;
+    margin: 15px 0;
     font-size: 16px;
-    display: flex;
-    align-items: center;
 }
 
 .contact-info ul li i {
     margin-right: 10px;
     color: lightblue;
-    font-size: 18px;
 }
 
-/* Formulaire de contact */
-.contact-form {
-    flex: 2;
-    min-width: 300px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: lightblue;
-}
-
+/* ======== FORM ======== */
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-label {
+.form-group label {
     display: block;
-    font-size: 14px;
-    font-weight: bold;
     margin-bottom: 8px;
-    color: #555;
+    font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: lightblue;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-/* Bouton d'envoi */
-.submit-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: lightblue;
-    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    outline: none;
+    background: #222;
+    color: #fff;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 120px;
+}
+
+.submit-btn {
+    background: #00cfff;
+    border: none;
+    padding: 12px 25px;
+    color: #000;
     font-size: 16px;
     font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: lightblue;
-    transform: scale(1.05);
+    background: #00aacc;
 }
 
-.submit-btn:active {
-    transform: scale(1);
-}
-
-/* Footer */
+/* ======== FOOTER ======== */
 .footer {
-    background-color: #333;
-    color: #fff;
+    background: #000;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
-}
-
-.footer p {
-    margin: 0;
+    margin-top: 50px;
     font-size: 14px;
+    color: #aaa;
 }
