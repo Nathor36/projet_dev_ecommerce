@@ -17,10 +17,5 @@
 </header>
 </head>
 <body>
-<h1>Apple Store</h1>
-<?php foreach($produits as $produit): ?> 
- <div class="card"> 
- <?= createCard($produit['nom'], $produit['prix'], $produit['image'], $produit['description'], $produit['categorie']) ?>
- </div>
-<?php endforeach; ?> 
+<h1>Haarple Store</h1>
 </html>
