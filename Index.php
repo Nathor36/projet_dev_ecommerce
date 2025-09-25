@@ -17,5 +17,5 @@
 </header>
 </head>
 <body>
-<h1>Haapple Store</h1>
+<h1>Haarpple Store</h1>
 </html>
