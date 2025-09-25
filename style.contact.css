@@ -126,10 +126,10 @@ nav.navbar {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    background: #222;
+    border: 2px;
+    border-radius: 7px;
+    outline: 10px;
+    background: #f9f9f9;
     color: #fff;
 }
 
@@ -139,10 +139,10 @@ nav.navbar {
 }
 
 .submit-btn {
-    background: #00cfff;
+    background: lightblue;
     border: none;
     padding: 12px 25px;
-    color: #000;
+    color: #ffffff;
     font-size: 16px;
     font-weight: bold;
     border-radius: 8px;
