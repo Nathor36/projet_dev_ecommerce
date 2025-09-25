@@ -70,7 +70,7 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Votre Entreprise. Tous droits réservés.</p>
+            <p>&copy; 2025 Votre Entreprise. Tous droits sortis du passé.</p>
         </div>
     </footer>
 </body>
