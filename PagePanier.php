@@ -31,19 +31,21 @@ if (!isset($_SESSION['panier'])) {
   </nav>
 </header>
 
+<div class="titlePanier">
+  
+  <h1>Mon Panier</h1>
 
-    <h1>Mon Panier</h1>
-
-
+</div>
 
 </body>
 
   <main class="panier-body">
-  <h1>Mes Articles</h1>
+
+  <h2>Mes Articles</h2>
 
   <div class="panier-produits">
-    <!-- Article 1 -->
-    <div class="product-card">
+  
+  <div class="product-card">
       <h3 class="card-title">Article 1</h3>
         
       <img src="images/a.jpg" alt="Article 1" class="card-image1">
@@ -56,9 +58,11 @@ if (!isset($_SESSION['panier'])) {
       
 
         <p class="card-price">350 €</p>
+
+        <button class="bouton-achat">Clique-moi</button>
     </div>
 
-    <!-- Article 2 -->
+ 
     <div class="product-card">
         <h3 class="card-title">Article 2</h3>
 
@@ -72,6 +76,9 @@ if (!isset($_SESSION['panier'])) {
       
 
       <p class="card-price">499 €</p>
+
+      <button class="bouton-achat">Clique-moi</button>
+
     </div>
   </div>
 </main>
