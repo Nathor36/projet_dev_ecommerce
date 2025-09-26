@@ -45,17 +45,23 @@ if (!isset($_SESSION['panier'])) {
 
   <div class="panier-produits">
   
+  <div class="baseproduct-card">
+
   <div class="product-card">
       <h3 class="card-title">Article 1</h3>
         
       <img src="images/a.jpg" alt="Article 1" class="card-image1">
         
         <p class="card-description1">Mackbook Air M2.</p>
-        <p class="card-description1">16GB RAM, 512GB SSD</p>
-        <p class="card-description1">Couleur: Gris Sidéral</p>
-        <p class="card-description1">Processeur: Apple M2</p>
-        <p class="card-description1">Écran: 13.6 pouces Retina</p>
-      
+
+
+      <div class="card-description2"
+
+        <p> - 16GB RAM, 512GB SSD  </p>
+        <p> - Couleur: Gris Sidéral </p>
+        <p> - Processeur: Apple M2 </p>
+        <p> - Écran: 13.6 pouces Retina </p>
+        </div>
 
         <p class="card-price">350 €</p>
 
@@ -68,12 +74,17 @@ if (!isset($_SESSION['panier'])) {
 
       <img src="images/b.jpg" alt="Article 2" class="card-image2">
 
-      <p class="card-description2">Mackbook Air M2.</p>
-        <p class="card-description2">16GB RAM, 512GB SSD</p>
-        <p class="card-description2">Couleur: Gris Sidéral</p>
-        <p class="card-description2">Processeur: Apple M2</p>
-        <p class="card-description2">Écran: 13.6 pouces Retina</p>
-      
+        <p class="card-description1">Mackbook Air M2.</p>
+
+        <div class="card-description2"
+
+        <p> - 16GB RAM, 512GB SSD  </p>
+        <p> - Couleur: Gris Sidéral </p>
+        <p> - Processeur: Apple M2 </p>
+        <p> - Écran: 13.6 pouces Retina </p>
+        </div>
+
+
 
       <p class="card-price">499 €</p>
 
