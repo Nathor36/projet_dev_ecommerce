@@ -20,12 +20,13 @@ if (!isset($_SESSION['panier'])) {
 <body>
 
 <header class="navbar">
-  <div class="logo">Ma Boutique</div>
+  <div class="logo">Haapple Store</div>
   <nav>
     <ul>
       <li><a href="index.php">Accueil</a></li>
       <li><a href="produits.php">Produits</a></li>
       <li><a href="contact.php">Contact</a></li>
+      <li><a href="connexion.php">Se connecter</a></li>
       <li><a href="PagePanier.php"><i class="fas fa-shopping-cart"></i></a></li>
     </ul>
   </nav>
@@ -74,7 +75,7 @@ if (!isset($_SESSION['panier'])) {
 
       <img src="images/b.jpg" alt="Article 2" class="card-image2">
 
-        <p class="card-description1">Mackbook Air M2.</p>
+        <p class="card-description1">Mac Studio.</p>
 
         <div class="card-description2"
 

@@ -2,15 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Test Cards</title>
+ <title>Haapple Store</title>
  <link rel="stylesheet" href="style.css">
  <header class="navbar">
-  <div class="logo">Ma Boutique</div>
+  <div class="logo">Haapple Store</div>
   <nav>
     <ul>
       <li><a href="index.php">Accueil</a></li>
       <li><a href="produits.php">Produits</a></li>
       <li><a href="contact.php">Contact</a></li>
+      <li><a href="connexion.php">Se connecter</a></li>
       <li><a href="PagePanier.php"><i class="fas fa-shopping-cart"></i></a></li>
     </ul>
   </nav>
