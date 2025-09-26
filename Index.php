@@ -11,7 +11,7 @@
       <li><a href="index.php">Accueil</a></li>
       <li><a href="produits.php">Produits</a></li>
       <li><a href="contact.php">Contact</a></li>
-      <li><a href="panier.php"><i class="fas fa-shopping-cart"></i></a></li>
+      <li><a href="PagePanier.php"><i class="fas fa-shopping-cart"></i></a></li>
     </ul>
   </nav>
 </header>
