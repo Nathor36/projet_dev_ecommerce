@@ -12,7 +12,7 @@
     <!-- HEADER -->
     <header class="header">
         <nav class="navbar">
-            <div class="logo">Ma Boutique</div>
+            <div class="logo">Haapple Store</div>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="produits.php">Produits</a></li>

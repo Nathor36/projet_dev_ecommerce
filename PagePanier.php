@@ -20,7 +20,7 @@ if (!isset($_SESSION['panier'])) {
 <body>
 
 <header class="navbar">
-  <div class="logo">Ma Boutique</div>
+  <div class="logo">Haapple Store</div>
   <nav>
     <ul>
       <li><a href="index.php">Accueil</a></li>
