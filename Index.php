@@ -19,4 +19,6 @@
 </head>
 <body>
 <h1>Haapple Store</h1>
+<div class="images-container">
+  <img src="images/logo.png" alt="image du logo" class="logo-image">
 </html>

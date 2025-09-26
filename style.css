@@ -118,6 +118,8 @@ img.card-image {
   font-weight: 500;
   font-size: 20px;
   transition: color 0.3s;
+  ;
+
 }
 
 .navbar nav ul li a:hover {
