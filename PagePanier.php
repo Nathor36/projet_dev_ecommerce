@@ -74,7 +74,7 @@ if (!isset($_SESSION['panier'])) {
 
       <img src="images/b.jpg" alt="Article 2" class="card-image2">
 
-        <p class="card-description1">Mackbook Air M2.</p>
+        <p class="card-description1">Mac Studio.</p>
 
         <div class="card-description2"
 
