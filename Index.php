@@ -4,7 +4,10 @@
 <head>
  <title>Haapple Store</title>
  <link rel="stylesheet" href="style.css">
- <header class="navbar">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header class="navbar">
   <div class="logo">Haapple Store</div>
   <nav>
     <ul>
@@ -16,9 +19,7 @@
     </ul>
   </nav>
 </header>
-</head>
-<body>
 <h1>Haapple Store</h1>
 <div class="images-container">
   <img src="images/logo.png" alt="image du logo" class="logo-image">
-</html>
+</div>

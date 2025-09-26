@@ -1,163 +1,140 @@
-/* Style général */
 body {
+    background-color: lightblue;
+    text-align: center; 
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: lightblue;
     color: #333;
-    line-height: 1.6;
-}
-
-/* Conteneur principal */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* En-tête */
-.header {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 20px 0;
+      line-height: 1.6;
+  }
+  
+  h1 {
+    color: white;
     text-align: center;
-    border-bottom: 5px solid #0056b3;
-}
-
-.header h1 {
-    font-size: 36px;
-    margin: 0;
-}
-
-.header p {
-    font-size: 18px;
-    margin: 10px 0 0;
-}
-
-/* Section produit */
-.product-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-/* Image du produit */
-.product-image {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-    text-align: center;
-}
-
-.product-image img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Détails du produit */
-.product-details {
-    flex: 2;
-    min-width: 300px;
-    background-color: #fff;
+  }
+  
+  img, image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  img.card-image {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.product-details h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #007BFF;
-}
-
-.product-details p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.product-details .price {
-    font-size: 24px;
-    font-weight: bold;
-    color: #28a745;
-    margin-bottom: 20px;
-}
-
-/* Bouton d'achat */
-.buy-btn {
+    width: 200px;
     display: inline-block;
-    padding: 12px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
-    text-align: center;
-}
-
-.buy-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-.buy-btn:active {
-    transform: scale(1);
-}
-
-/* Section des avis */
-.reviews-section {
-    margin-top: 40px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.reviews-section h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #007BFF;
-}
-
-.review {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-}
-
-.review:last-child {
-    border-bottom: none;
-}
-
-.review .review-author {
-    font-weight: bold;
-    color: #333;
-}
-
-.review .review-text {
+    vertical-align: top;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .card-description {
     font-size: 14px;
     color: #555;
-    margin-top: 5px;
-}
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-.footer p {
-    margin: 0;
+    margin: 10px 0;
+  }
+  
+  .card-price {
+    font-size: 16px;
+    color: #000;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .card-category {
     font-size: 14px;
-}
+    color: #888;
+    margin: 10px 0;
+  }
+  
+  .navbar {
+    background-color: #000;   
+    color: white;
+    border-bottom: 5px solid lightblue;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 40px 30px; 
+    top: 0;
+    z-index: 1000;
+  }
+  
+  
+  
+  /* Header */
+  .header {
+      background-color: lightblue;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 5px solid lightblue;
+  }
+  
+  .header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+  }
+  
+  .header p {
+      font-size: 18px;
+      margin: 0;
+  }
+  
+  .navbar {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .navbar ul li a:hover,
+  .navbar ul li a.active {
+    color: lightblue;
+  }
+  
+  .navbar i {
+    font-size: 20px;
+    color: #fff;
+  }
+  
