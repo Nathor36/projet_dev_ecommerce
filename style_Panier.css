@@ -45,10 +45,10 @@ img.card-image1 {
   border-radius: 4px;
   padding: 5px;
   width: 300px;
-  height: 200px;
+  height: 225px;
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 89px;
 }
 
 img.card-image2 {
@@ -56,7 +56,7 @@ img.card-image2 {
   border-radius: 4px;
   padding: 5px;
   width: 300px;
-  height: 200px;
+  height: 225px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -87,7 +87,7 @@ background-color: #F2F2F2;
 }
 
 .card-title {
-  font-size: 18px;
+  font-size:30px;
   margin: 10px 0;
 }
 
@@ -208,7 +208,7 @@ x
 .panier-body {
   padding: 20px;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .panier-produits {
@@ -254,6 +254,7 @@ x
   font-size: 14px;
   color: #555;
   margin: 10px 0;
+  text-align: center;
 }
 
 
@@ -263,7 +264,8 @@ x
   border-radius: 6px;
   padding: 10px;
   margin-top: 10px;            
-  text-align: center;           
+  text-align: left; 
+  height: 130px;         
 }
 
 .bouton-achat {
