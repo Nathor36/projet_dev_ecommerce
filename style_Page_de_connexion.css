@@ -1,29 +1,75 @@
-body{
+/* Reset et body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background: lightblue;
 }
 
-#container{
-    width:400px;
-    margin:0 auto;
-    margin-top:10%;
+/* Navbar en haut noir */
+.navbar {
+    background-color: #000;
+    color: white;
+    border-bottom: 5px solid lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Bordered form */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: lightblue;
+}
+
+.navbar i {
+    font-size: 20px;
+}
+
+/* Container formulaire centré */
+#container {
+    width: 400px;
+    margin: 10% auto 0 auto;
+    padding: 0 10px;
+}
+
+/* Formulaire */
 form {
-    width:100%;
+    width: 100%;
     padding: 30px;
     border: 1px solid #f1f1f1;
     background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2), 0 5px 5px rgba(0,0,0,0.24);
+    box-sizing: border-box;
 }
 
-#container h1{
-    width: 38%;
-    margin: 0 auto;
-    padding-bottom: 10px;
+form h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -33,7 +79,6 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
 input[type=submit] {
     background-color: lightblue;
     color: white;
@@ -42,6 +87,7 @@ input[type=submit] {
     border: none;
     cursor: pointer;
     width: 100%;
+    font-size: 16px;
 }
 
 input[type=submit]:hover {
@@ -50,59 +96,25 @@ input[type=submit]:hover {
     border: 1px solid lightblue;
 }
 
-.header {
-    background-color: lightblue;
-    color: #fff;
-    padding: 40px 20px;
+.error {
+    color: red;
     text-align: center;
-    border-bottom: 5px solid lightblue;
+    margin-top: 10px;
 }
 
-.header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.header p {
-    font-size: 18px;
-    margin: 0;
-}
-
-.navbar {
-  background-color: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-}
-
-.navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.navbar ul li a:hover,
-.navbar ul li a.active {
-  color: lightblue;
-}
-
-.navbar i {
-  font-size: 20px;
-  color: #fff;
+/* Responsive pour mobile */
+@media (max-width: 500px){
+    #container {
+        width: 90%;
+        margin-top: 20%;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
