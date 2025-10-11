@@ -19,7 +19,16 @@
     </ul>
   </nav>
 </header>
+
 <h1>Haapple Store</h1>
+<?php
+                session_start();
+                if($_SESSION['username'] !== ""){
+                    $user = $_SESSION['username'];
+                    // afficher un message
+                    echo "Bonjour $user, vous êtes connecté";
+                }
+            ?>
 <div class="images-container">
   <img src="images/logo.png" alt="image du logo" class="logo-image">
 </div>

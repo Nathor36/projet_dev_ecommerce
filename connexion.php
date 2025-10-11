@@ -33,8 +33,8 @@
 
             <label for="password"><b>Mot de passe</b></label>
             <input type="password" placeholder="Entrer le mot de passe" id="password" name="password" required>
-
-            <input type="submit" value="LOGIN">
+            <a href="inscription.php" class="inscription">Créer un compte</a>
+            <input type="submit" value="Connexion">
 
             <?php
             if(isset($_GET['erreur'])){
