@@ -18,7 +18,7 @@ if ($email === '' || $password === '') {
 
 try {
     // On cherche un utilisateur avec cet email
-    $sql = "SELECT * FROM utilisateur WHERE email = :email LIMIT 1";
+    $sql = "SELECT * FROM utilisateurs WHERE email = :email LIMIT 1";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([':email' => $email]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);

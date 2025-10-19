@@ -28,8 +28,8 @@
         <form action="verification.php" method="POST">
             <h1>Connexion</h1>
 
-            <label for="username"><b>Nom d'utilisateur</b></label>
-            <input type="text" placeholder="Entrer le nom d'utilisateur" id="username" name="username" required>
+            <label for="username"><b>Adresse Mail</b></label>
+            <input type="text" placeholder="Entrer votre adresse mail" id="username" name="username" required>
 
             <label for="password"><b>Mot de passe</b></label>
             <input type="password" placeholder="Entrer le mot de passe" id="password" name="password" required>
@@ -40,7 +40,7 @@
             if(isset($_GET['erreur'])){
                 $err = intval($_GET['erreur']);
                 if($err === 1 || $err === 2){
-                    echo "<p class='error'>Utilisateur ou mot de passe incorrect</p>";
+                    echo "<p class='error'>Mail ou mot de passe incorrect</p>";
                 }
             }
             ?>

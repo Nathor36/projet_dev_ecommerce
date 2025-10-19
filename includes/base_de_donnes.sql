@@ -1,12 +1,12 @@
 CREATE DATABASE IF NOT EXISTS ecommerce;
 USE ecommerce;
 
-CREATE TABLE categorie (
+CREATE TABLE categories (
     id_categorie INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE produit (
+CREATE TABLE produits (
     id_produit INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(150) NOT NULL,
     description TEXT,
@@ -17,7 +17,7 @@ CREATE TABLE produit (
     FOREIGN KEY (id_categorie) REFERENCES categorie(id_categorie) ON DELETE SET NULL
 );
 
-CREATE TABLE utilisateur (
+CREATE TABLE utilisateurs (
     id_utilisateur INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(100) NOT NULL,
     prenom VARCHAR(100),
@@ -26,7 +26,7 @@ CREATE TABLE utilisateur (
 );
 
 
-CREATE TABLE adresse (
+CREATE TABLE adresses (
     id_adresse INT AUTO_INCREMENT PRIMARY KEY,
     id_utilisateur INT NOT NULL,
     type ENUM('livraison', 'facturation') NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE adresse (
     FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur) ON DELETE CASCADE
 );
 
-CREATE TABLE panier (
+CREATE TABLE paniers (
     id_panier INT AUTO_INCREMENT PRIMARY KEY,
     session_id VARCHAR(255) NOT NULL, 
     id_utilisateur INT NULL,          
@@ -45,7 +45,7 @@ CREATE TABLE panier (
     FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur) ON DELETE SET NULL
 );
 
-CREATE TABLE panier_produit (
+CREATE TABLE panier_produits (
     id_panier INT,
     id_produit INT,
     quantite INT DEFAULT 1,
@@ -54,7 +54,7 @@ CREATE TABLE panier_produit (
     FOREIGN KEY (id_produit) REFERENCES produit(id_produit) ON DELETE CASCADE
 );
 
-CREATE TABLE commande (
+CREATE TABLE commandes (
     id_commande INT AUTO_INCREMENT PRIMARY KEY,
     id_utilisateur INT NOT NULL,
     id_adresse_livraison INT NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE commande (
     FOREIGN KEY (id_adresse_facturation) REFERENCES adresse(id_adresse) ON DELETE CASCADE
 );
 
-CREATE TABLE commande_produit (
+CREATE TABLE commandes_produits (
     id_commande INT,
     id_produit INT,
     quantite INT DEFAULT 1,
