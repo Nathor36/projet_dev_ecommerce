@@ -14,7 +14,7 @@ CREATE TABLE produits (
     image VARCHAR(255),
     stock INT DEFAULT 0,
     id_categorie INT,
-    FOREIGN KEY (id_categorie) REFERENCES categorie(id_categorie) ON DELETE SET NULL
+    FOREIGN KEY (id_categorie) REFERENCES categories(id_categorie) ON DELETE SET NULL
 );
 
 CREATE TABLE utilisateurs (
@@ -25,7 +25,6 @@ CREATE TABLE utilisateurs (
     mot_de_passe VARCHAR(255) NOT NULL
 );
 
-
 CREATE TABLE adresses (
     id_adresse INT AUTO_INCREMENT PRIMARY KEY,
     id_utilisateur INT NOT NULL,
@@ -34,7 +33,7 @@ CREATE TABLE adresses (
     ville VARCHAR(100) NOT NULL,
     code_postal VARCHAR(20) NOT NULL,
     pays VARCHAR(100) NOT NULL,
-    FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur) ON DELETE CASCADE
+    FOREIGN KEY (id_utilisateur) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE
 );
 
 CREATE TABLE paniers (
@@ -42,7 +41,7 @@ CREATE TABLE paniers (
     session_id VARCHAR(255) NOT NULL, 
     id_utilisateur INT NULL,          
     date_creation DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur) ON DELETE SET NULL
+    FOREIGN KEY (id_utilisateur) REFERENCES utilisateurs(id_utilisateur) ON DELETE SET NULL
 );
 
 CREATE TABLE panier_produits (
@@ -50,8 +49,8 @@ CREATE TABLE panier_produits (
     id_produit INT,
     quantite INT DEFAULT 1,
     PRIMARY KEY (id_panier, id_produit),
-    FOREIGN KEY (id_panier) REFERENCES panier(id_panier) ON DELETE CASCADE,
-    FOREIGN KEY (id_produit) REFERENCES produit(id_produit) ON DELETE CASCADE
+    FOREIGN KEY (id_panier) REFERENCES paniers(id_panier) ON DELETE CASCADE,
+    FOREIGN KEY (id_produit) REFERENCES produits(id_produit) ON DELETE CASCADE
 );
 
 CREATE TABLE commandes (
@@ -62,9 +61,9 @@ CREATE TABLE commandes (
     date_commande DATETIME DEFAULT CURRENT_TIMESTAMP,
     statut ENUM('en attente', 'en cours', 'expédiée', 'livrée', 'annulée') DEFAULT 'en attente',
     total DECIMAL(10,2),
-    FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur) ON DELETE CASCADE,
-    FOREIGN KEY (id_adresse_livraison) REFERENCES adresse(id_adresse) ON DELETE CASCADE,
-    FOREIGN KEY (id_adresse_facturation) REFERENCES adresse(id_adresse) ON DELETE CASCADE
+    FOREIGN KEY (id_utilisateur) REFERENCES utilisateurs(id_utilisateur) ON DELETE CASCADE,
+    FOREIGN KEY (id_adresse_livraison) REFERENCES adresses(id_adresse) ON DELETE CASCADE,
+    FOREIGN KEY (id_adresse_facturation) REFERENCES adresses(id_adresse) ON DELETE CASCADE
 );
 
 CREATE TABLE commandes_produits (
@@ -73,6 +72,6 @@ CREATE TABLE commandes_produits (
     quantite INT DEFAULT 1,
     prix_unitaire DECIMAL(10,2) NOT NULL,
     PRIMARY KEY (id_commande, id_produit),
-    FOREIGN KEY (id_commande) REFERENCES commande(id_commande) ON DELETE CASCADE,
-    FOREIGN KEY (id_produit) REFERENCES produit(id_produit) ON DELETE CASCADE
+    FOREIGN KEY (id_commande) REFERENCES commandes(id_commande) ON DELETE CASCADE,
+    FOREIGN KEY (id_produit) REFERENCES produits(id_produit) ON DELETE CASCADE
 );
