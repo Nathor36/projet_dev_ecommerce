@@ -56,7 +56,7 @@ if (!isset($_SESSION['panier'])) {
         <p class="card-description1">Mackbook Air M2.</p>
 
 
-      <div class="card-description2"
+      <div class="card-description2">
 
         <p> - 16GB RAM, 512GB SSD  </p>
         <p> - Couleur: Gris Sidéral </p>
@@ -77,7 +77,7 @@ if (!isset($_SESSION['panier'])) {
 
         <p class="card-description1">Mac Studio.</p>
 
-        <div class="card-description2"
+        <div class="card-description2">
 
         <p> - 16GB RAM, 512GB SSD  </p>
         <p> - Couleur: Gris Sidéral </p>
