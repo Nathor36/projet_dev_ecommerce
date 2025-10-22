@@ -40,65 +40,58 @@ if (!isset($_SESSION['panier'])) {
 
 </body>
 
-  <main class="panier-body">
+<table border="1">
+  <tr>
+            <th>Produit</th>
+            <th>Quantité</th>
+            <th>Prix</th>
+            <th>Action</th>
+        </tr>
+        <?php
+            $total = 0;
+            $count = count($_SESSION['panier']);
+            $minRows = 5; // nombre de lignes minimales à afficher
+            $emptyRows = max(0, $minRows - $count);
+        ?>
+        <?php foreach ($_SESSION['panier'] as $item): ?>
+        <tr>
+            <td><?php echo htmlspecialchars($item['name']); ?></td>
+            <td><?php echo (int)$item['quantity']; ?></td>
+            <td>
+                <?php
 
-  <h2>Mes Articles</h2>
+                $price = 0;
+                $product = "SELECT * FORM products WHERE id = " . (int)$item['product_id']." LIMIT 1";
 
-  <div class="panier-produits">
-  
-  <div class="baseproduct-card">
+                $price = $product['price'] * (int)$item['quantity'];
+                $total += $price;
+                ?>
+                <?= number_format($price, 2) ?> €
+            </td>
+            <td>
+                <form method="post" action="remove_from_cart.php">
+                    <input type="hidden" name="product_id" value="<?= (int)$item['product_id'] ?>">
+                    <button type="submit">Retirer</button>
+                </form>
+            </td>
+        </tr>
+        <?php endforeach; ?>
 
-  <div class="product-card">
-      <h3 class="card-title">Article 1</h3>
+        <?php for ($i = 0; $i < $emptyRows; $i++): ?>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            </tr>
+        <?php endfor; ?>
         
-      <img src="images/a.jpg" alt="Article 1" class="card-image1">
-        
-        <p class="card-description1">Mackbook Air M2.</p>
-
-
-      <div class="card-description2">
-
-        <p> - 16GB RAM, 512GB SSD  </p>
-        <p> - Couleur: Gris Sidéral </p>
-        <p> - Processeur: Apple M2 </p>
-        <p> - Écran: 13.6 pouces Retina </p>
-        </div>
-
-        <p class="card-price">350 €</p>
-
-        <button class="bouton-achat">Clique-moi</button>
-    </div>
-
- 
-    <div class="product-card">
-        <h3 class="card-title">Article 2</h3>
-
-      <img src="images/b.jpg" alt="Article 2" class="card-image2">
-
-        <p class="card-description1">Mac Studio.</p>
-
-        <div class="card-description2">
-
-        <p> - 16GB RAM, 512GB SSD  </p>
-        <p> - Couleur: Gris Sidéral </p>
-        <p> - Processeur: Apple M2 </p>
-        <p> - Écran: 13.6 pouces Retina </p>
-        </div>
-
-
-
-      <p class="card-price">499 €</p>
-
-      <button class="bouton-achat">Clique-moi</button>
-
-    </div>
-  </div>
-</main>
-
-    </div>
-  </div>
-</main>
-
-
-
+        <tr>
+            <td colspan="3"><strong>Total</strong></td>
+            <td>
+                <strong><?= number_format($total, 2) ?> €</strong>
+            </td>
+        </tr>
+    </table>
+</body>
 </html>
