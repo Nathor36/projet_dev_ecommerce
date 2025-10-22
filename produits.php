@@ -36,68 +36,64 @@ require_once 'connexion_bdd.php';  // fichier de connexion et il contien la vari
 
     <h1>Nos Produits</h1>
 
-        <footer>
+<footer>
         <!-- inchalla sa marche c'est les futur boutton pour trié -->
-        <button class='btn-filtre'>Smartphone</button>
-        <button class='btn-filtre'>Ordinateur</button>
-        <button class='btn-filtre'>Accessoire</button>
-        <button class='btn-filtre'>Tablette</button>
-    
-        </footer>
-    <?php
-    //la c'est le début pour afficher les produit qui sont dans la base de donné 
+         
+        <form method="get" style="display:inline;">
+        <button type="submit" class="btn-filtre">Afficher tout les Produits</button>
+    </form>          
+        
+        <form method="get" style="display:inline;">
+        <input type="hidden" name="categorie" value="Smartphone">
+        <button type="submit" class="btn-filtre">Smartphone</button>
+    </form>
 
-    // la c'est la première étape et on prépare la requête SQL pour aller chercher tout nos produits dans la table du même nom
-    $tproduit = "SELECT * FROM produits"; 
+    <form method="get" style="display:inline;">
+        <input type="hidden" name="categorie" value="Ordinateur">
+        <button type="submit" class="btn-filtre">Ordinateur</button>
+    </form>
 
-    // la c'est la deuxième étape on éxecute la requête sql donc le $tproduit dans la base de donné $pdo et cette requete elle a pour nom bas = $requete
-    $requete = $pdo->query($tproduit); 
+    <form method="get" style="display:inline;">
+        <input type="hidden" name="categorie" value="Accessoire">
+        <button type="submit" class="btn-filtre">Accessoire</button>
+    </form>
 
-    // la déreniére étape on récuper tout les résultat donc de la requete "SELECT * FROM produits" mais sous la forme d'un tableau 
-    $articles = $requete->fetchAll(PDO::FETCH_ASSOC);  
-    ?>
+    <form method="get" style="display:inline;">
+        <input type="hidden" name="categorie" value="Tablette">
+        <button type="submit" class="btn-filtre">Tablette</button>
+    </form>
 
-    <!-- *************** AFFICHAGE DES PRODUITS *************** -->
-    <section class="produits">
-        <!-- On parcourt le tableau $articles, chaque élément correspond à un produit -->
-        <?php foreach($articles as $article): ?>
-            
-            <!-- Bloc HTML représentant un seul produit -->
-            <article class="produit"> 
-                
-                <!-- Si une image existe pour le produit -->
-                <?php if (!empty($article['image'])): ?>
-                    
-                    <!-- On affiche l’image du produit (dossier images/) -->
-                    <img src="images/<?php echo htmlspecialchars($article['image']); ?>" 
-                         alt="<?php echo htmlspecialchars($article['nom']); ?>" 
-                         class="image-produit">
-                
-                <?php else: ?>
-                    <!-- Sinon, on affiche une image par défaut -->
-                    <img src="images/placeholder.png" alt="Image non disponible" class="image-produit">
-                <?php endif; ?>
 
-                <!-- Nom du produit -->
-                <h2><?php echo htmlspecialchars($article["nom"]); ?></h2>
+</footer>
 
-                <!-- Description du produit (si elle existe) -->
-                <?php if (!empty($article["description"])): ?>
-                    <p class="description"><?php echo htmlspecialchars($article["description"]); ?></p>
-                <?php endif; ?>
+<?php
+// Récupérer le nom de la catégorie depuis un paramètre GET ou POST
+$categorie = isset($_GET['categorie']) ? $_GET['categorie'] : '';
 
-                <!-- Prix du produit (si défini) -->
-                <?php if (isset($article["prix"])): ?>
-                    <!-- number_format formate le nombre avec 2 décimales et des séparateurs français -->
-                    <p class="prix"><?php echo number_format($article["prix"], 2, ',', ' '); ?> €</p>
-                <?php endif; ?>
+// Préparer la requête avec JOIN pour filtrer par nom de catégorie
+$stmt = $pdo->prepare("
+    SELECT p.* 
+    FROM produits p
+    INNER JOIN categories c ON p.id_categorie = c.id_categorie
+    WHERE c.nom = :categorie
+");
 
-                <!-- Bouton pour ajouter le produit au panier -->
-                <button class="btn-acheter">Ajouter au panier</button>
-            </article>
+// Exécuter la requête en liant le paramètre
+$stmt->execute(['categorie' => $categorie]);
 
-        <?php endforeach; ?>
-    </section>
+// Récupérer tous les produits
+$produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// Afficher les produits
+foreach ($produits as $produit) {
+    echo "<h2>" . htmlspecialchars($produit['nom']) . "</h2>";
+    echo "<p><strong>Catégorie :</strong> " . htmlspecialchars($produit['nom']) . "</p>";
+    echo "<p><strong>Description :</strong> " . htmlspecialchars($produit['description']) . "</p>";
+    echo "<p><strong>Prix :</strong> " . htmlspecialchars($produit['prix']) . " €</p>";
+    if (!empty($produit['image'])) {
+        echo "<img src='images/" . htmlspecialchars($produit['image']) . "' alt='" . htmlspecialchars($produit['nom_produit']) . "' style='max-width:200px;'><br>";
+    }
+}
+?>
 </body>
 </html>
