@@ -67,7 +67,6 @@ $_SESSION['panier'] = [
         'quantity' => 1,
         'name' => 'Product J',
     ],
-    
 ];
 
 function createCard($nom, $prix, $image, $description, $categorie)
