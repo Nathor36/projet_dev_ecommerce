@@ -20,7 +20,6 @@ include 'includes/card.php';
             <li><a href="index.php">Accueil</a></li>
             <li><a href="produits.php">Produits</a></li>
             <li><a href="contact.php">Contact</a></li>
-                <li><a href="logout.php">Se déconnecter</a></li>
                 <li><a href="connexion.php">Se connecter</a></li>
             <li><a href="PagePanier.php"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
