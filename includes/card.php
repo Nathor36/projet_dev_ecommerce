@@ -14,6 +14,9 @@ $produits = [
 ];
 
 $_SESSION['panier'] = [
+
+    // Trouver les articles dans le panier
+
     [
         'product_id' => 1,
         'quantity' => 1,
@@ -66,67 +69,6 @@ $_SESSION['panier'] = [
     ],
     
 ];
-?>
-
-<html>
-<head>
-    <title>Panier</title>
-</head>
-<body>
-    <h1>Votre Panier</h1>
-    <table border="1">
-        <tr>
-            <th>Produit</th>
-            <th>Quantité</th>
-            <th>Prix</th>
-            <th>Action</th>
-        </tr>
-        <?php
-            $total = 0;
-        ?>
-        <?php foreach ($_SESSION['panier'] as $item): ?>
-        <tr>
-            <td><?php echo htmlspecialchars($item['name']); ?></td>
-            <td><?php echo (int)$item['quantity']; ?></td>
-            <td>
-                <?php
-                // Simuler un prix pour chaque produit
-                $price = 0;
-                $product = "SELECT * FORM products WHERE id = " . (int)$item['product_id']." LIMIT 1";
-
-                $price = $product['price'] * (int)$item['quantity'];
-                $total += $price;
-                ?>
-                <?= number_format($price, 2) ?> €
-            </td>
-            <td>
-                <form method="post" action="remove_from_cart.php">
-                    <input type="hidden" name="product_id" value="<?= (int)$item['product_id'] ?>">
-                    <button type="submit">Retirer</button>
-                </form>
-            </td>
-        </tr>
-        <?php endforeach; ?>
-        <tr>
-            <td colspan="3"><strong>Total</strong></td>
-            <td>
-                <strong><?= number_format($total, 2) ?> €</strong>
-            </td>
-        </tr>
-    </table>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
 
 function createCard($nom, $prix, $image, $description, $categorie)
 {
