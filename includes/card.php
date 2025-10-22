@@ -69,7 +69,8 @@ $_SESSION['panier'] = [
     ],
 ];
 
-function createCard($nom, $prix, $image, $description, $categorie)
+
+function createCard($nom, $prix, $image, $description, $categorie,)
 {
 return "
 <div class='product-card'>
@@ -79,8 +80,9 @@ return "
 <p class='card-description'>$description</p>
 <p class='card-category'>Catégorie: $categorie</p>
 <div class='card-price'>$prix €</div>
+<button class='btn-acheter'>Ajouter $nom au panier </button>
 
-<button class='btn-acheter'>Ajouter au panier</button>
+
 </div>
 </div>";
 }

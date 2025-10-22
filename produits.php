@@ -34,5 +34,17 @@
     ?>
     <?php foreach($produits as $produit):?> 
  <div class="card"> 
- <?= createCard($produit['nom'], $produit['prix'], $produit['image'], $produit['description'], $produit['categorie']) ?>
+
+ <div class="products-card
+ <img class="card-image" src="../projet_dev_ecommerce/images/A.jpg alt "Macbook air M2">
+ <Div class="card-content">
+  <h3 class="card-title">Macbook air M2 ; ?></h3>
+  <p class="card-description">Portable Utra-Fin </p>
+  <p class="card-category">Catégorie: Ordinateur</p>
+  <div class="card-price">1299 €</div>
+    </div>
+    <button class='btn-acheter'>Ajouter $nom au panier </button>
+    
+ <?= createCard($produit['nom'], $produit['prix'], $produit['image'], $produit['description'], $produit['categorie'], $id) ?>
+ 
 <?php endforeach; ?> 
