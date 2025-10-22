@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'includes/card.php';
+require_once 'connexion_bdd.php'
 ?>
 <!DOCTYPE html>
 <html lang="fr">
