@@ -20,8 +20,19 @@
             </ul>
         </nav>
     </header>
+    <button class='btn-acheter'>Smartphone</button>
+    <button class='btn-acheter'>Ordinateur</button>
+    <button class='btn-acheter'>Accessoire</button>
+    <button class='btn-acheter'>Tablette</button>
 
-<?php foreach($produits as $produit): ?> 
+    <?php
+     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['Smartphone']))
+        // Filtrer les produits pour n'afficher que les smartphones
+        $produits = array_filter($produits, function($produit) {
+            return $produit['categorie'] === 'Smartphone';
+        });
+    ?>
+    <?php foreach($produits as $produit):?> 
  <div class="card"> 
  <?= createCard($produit['nom'], $produit['prix'], $produit['image'], $produit['description'], $produit['categorie']) ?>
 <?php endforeach; ?> 
