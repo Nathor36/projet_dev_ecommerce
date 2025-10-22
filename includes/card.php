@@ -1,17 +1,132 @@
 <?php
 
 $produits = [
- ['nom' => 'iPhone 32 Pro', 'prix' => 1449, 'image' => 'C.jpg', 'description' => 'Smartphone haut de gamme', 'categorie' => 'smartphone'],
- ['nom' => 'MacBook Air M2', 'prix' => 2036, 'image' => 'A.jpg', 'description' => 'Portable ultra-fin', 'categorie' => 'ordinateur'],
- ['nom' => 'AirPods Pro', 'prix' => 279, 'image' => 'E.jpg', 'description' => 'Écouteurs sans fil', 'categorie' => 'accessoire'],
- ['nom' => 'iPad Air', 'prix' => 699, 'image' => 'F.jpg', 'description' => 'Tablette polyvalente', 'categorie' => 'tablette'],
- ['nom' => 'Rolex Apple Watch', 'prix' => 44449, 'image' => 'D.jpg', 'description' => 'Montre connectée', 'categorie' => 'accessoire'],
- ['nom' => 'haappel fortuna watch', 'prix' => 147450, 'image' => 'G.jpg' , 'description' => 'montre de luxe', 'categorie' => 'accessoire'],
- ['nom' => 'Mac Studio', 'prix' => 2299, 'image' => 'B.jpg', 'description' => 'Station ultra-puissante', 'categorie' => 'ordinateur'],
- ['nom' => 'haarpods' , 'prix' => 1100, 'image' => 'H.jpeg' , 'description' => 'ecouteurs derniere generation', 'categorie' => 'accessoires'],
- ['nom' => 'iphone 64 mini' , 'prix' => 2100, 'image' => 'i.webp' , 'description' => 'telephone derniere generation', 'categorie' => 'smartphone'],
- ['nom' => 'ipad KIDIZOOM' , 'prix' => 100, 'image' => 'j.jpg' , 'description' => 'tablette du peuple', 'categorie' => 'tablette'],
+ ['nom' => 'iPhone 32 Pro', 'prix' => 1449, 'image' => 'C.jpg', 'description' => 'Smartphone haut de gamme', 'categorie' => 'smartphone' , 'Id' => "1"],
+ ['nom' => 'MacBook Air M2', 'prix' => 2036, 'image' => 'A.jpg', 'description' => 'Portable ultra-fin', 'categorie' => 'ordinateur' , 'Id' => "2"],
+ ['nom' => 'AirPods Pro', 'prix' => 279, 'image' => 'E.jpg', 'description' => 'Écouteurs sans fil', 'categorie' => 'accessoire', 'Id' => "3"],
+ ['nom' => 'iPad Air', 'prix' => 699, 'image' => 'F.jpg', 'description' => 'Tablette polyvalente', 'categorie' => 'tablette' , 'Id' => "4"],
+ ['nom' => 'Rolex Apple Watch', 'prix' => 44449, 'image' => 'D.jpg', 'description' => 'Montre connectée', 'categorie' => 'accessoire' , 'Id' => "5"],
+ ['nom' => 'haappel fortuna watch', 'prix' => 147450, 'image' => 'G.jpg' , 'description' => 'montre de luxe', 'categorie' => 'accessoire' , 'Id' => "6"],
+ ['nom' => 'Mac Studio', 'prix' => 2299, 'image' => 'B.jpg', 'description' => 'Station ultra-puissante', 'categorie' => 'ordinateur', 'Id' => "7"],
+ ['nom' => 'haarpods' , 'prix' => 1100, 'image' => 'H.jpeg' , 'description' => 'ecouteurs derniere generation', 'categorie' => 'accessoires' , 'Id' => "8"],
+ ['nom' => 'iphone 64 mini' , 'prix' => 2100, 'image' => 'i.webp' , 'description' => 'telephone derniere generation', 'categorie' => 'smartphone' , 'Id' => "9"],
+ ['nom' => 'ipad KIDIZOOM' , 'prix' => 100, 'image' => 'j.jpg' , 'description' => 'tablette du peuple', 'categorie' => 'tablette' , 'Id' => "10"],
 ];
+
+$_SESSION['panier'] = [
+    [
+        'product_id' => 1,
+        'quantity' => 1,
+        'name' => 'Product A',
+    ],
+    [
+        'product_id' => 2,
+        'quantity' => 1,
+        'name' => 'Product B',
+    ],
+    [
+        'product_id' => 3,
+        'quantity' => 1,
+        'name' => 'Product C',
+    ],
+    [
+        'product_id' => 4,
+        'quantity' => 1,
+        'name' => 'Product D',
+    ],
+    [
+        'product_id' => 5,
+        'quantity' => 1,
+        'name' => 'Product E',
+    ],
+    [
+        'product_id' => 6,
+        'quantity' => 1,
+        'name' => 'Product F',
+    ],
+    [
+        'product_id' => 7,
+        'quantity' => 1,
+        'name' => 'Product G',
+    ],
+    [
+        'product_id' => 8,
+        'quantity' => 1,
+        'name' => 'Product H',
+    ],
+    [
+        'product_id' => 9,
+        'quantity' => 1,
+        'name' => 'Product I',
+    ],
+    [
+        'product_id' => 10,
+        'quantity' => 1,
+        'name' => 'Product J',
+    ],
+    
+];
+?>
+
+<html>
+<head>
+    <title>Panier</title>
+</head>
+<body>
+    <h1>Votre Panier</h1>
+    <table border="1">
+        <tr>
+            <th>Produit</th>
+            <th>Quantité</th>
+            <th>Prix</th>
+            <th>Action</th>
+        </tr>
+        <?php
+            $total = 0;
+        ?>
+        <?php foreach ($_SESSION['panier'] as $item): ?>
+        <tr>
+            <td><?php echo htmlspecialchars($item['name']); ?></td>
+            <td><?php echo (int)$item['quantity']; ?></td>
+            <td>
+                <?php
+                // Simuler un prix pour chaque produit
+                $price = 0;
+                $product = "SELECT * FORM products WHERE id = " . (int)$item['product_id']." LIMIT 1";
+
+                $price = $product['price'] * (int)$item['quantity'];
+                $total += $price;
+                ?>
+                <?= number_format($price, 2) ?> €
+            </td>
+            <td>
+                <form method="post" action="remove_from_cart.php">
+                    <input type="hidden" name="product_id" value="<?= (int)$item['product_id'] ?>">
+                    <button type="submit">Retirer</button>
+                </form>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+        <tr>
+            <td colspan="3"><strong>Total</strong></td>
+            <td>
+                <strong><?= number_format($total, 2) ?> €</strong>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
 
 function createCard($nom, $prix, $image, $description, $categorie)
 {
