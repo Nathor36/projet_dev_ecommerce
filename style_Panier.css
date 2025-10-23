@@ -267,7 +267,11 @@ th {
 td {
   padding: 12px;
   font-size: 15px;
+<<<<<<< HEAD
   border: 1px solid #000;
+=======
+  border: "1px solid #000;
+>>>>>>> parent of 9482642 (moizjedoizejd)
 }
 
 tr:nth-child(even) {
@@ -291,6 +295,7 @@ button:hover {
 tbody {
   min-height: 300px;
 }
+<<<<<<< HEAD
 
 body {
     font-family: Arial, sans-serif;
@@ -354,3 +359,5 @@ body {
 .btn-retour { background: #3498db; }
 .btn-maj { background: #f1c40f; color: black; }
 .btn-commander { background: #2ecc71; }
+=======
+>>>>>>> parent of 9482642 (moizjedoizejd)
