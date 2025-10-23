@@ -21,7 +21,7 @@ require_once 'connexion_bdd.php'
             <li><a href="produits.php">Produits</a></li>
             <li><a href="contact.php">Contact</a></li>
                 <?php if (isset($_SESSION['id_utilisateur'])): ?>
-    <li><span>Bonjour, <?= htmlspecialchars($_SESSION['prenom']) ?> 👋</span></li>
+    <li><span>Bonjour, <?= htmlspecialchars($_SESSION['prenom']) ?></span></li>
     <li><a href="mes_commandes.php">Mes commandes</a></li>
     <li><a href="deconnexion.php">Se déconnecter</a></li>
 <?php else: ?>
