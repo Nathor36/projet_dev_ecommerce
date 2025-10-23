@@ -87,11 +87,10 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // Afficher les produits
 foreach ($produits as $produit) {
     echo "<h2>" . htmlspecialchars($produit['nom']) . "</h2>";
-    echo "<p><strong>Catégorie :</strong> " . htmlspecialchars($produit['nom']) . "</p>";
     echo "<p><strong>Description :</strong> " . htmlspecialchars($produit['description']) . "</p>";
     echo "<p><strong>Prix :</strong> " . htmlspecialchars($produit['prix']) . " €</p>";
     if (!empty($produit['image'])) {
-        echo "<img src='images/" . htmlspecialchars($produit['image']) . "' alt='" . htmlspecialchars($produit['nom_produit']) . "' style='max-width:200px;'><br>";
+        echo "<img src='images/" . htmlspecialchars($produit['image']) . "' alt='" . htmlspecialchars($produit['nom']) . "' style='max-width:200px;'><br>";
     }
 }
 ?>
