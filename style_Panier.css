@@ -291,3 +291,66 @@ button:hover {
 tbody {
   min-height: 300px;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: #222;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.navbar a.active i { color: #00ffcc; }
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.table-panier {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-panier th, .table-panier td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+.table-panier img {
+    border-radius: 8px;
+}
+
+.total-panier {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.btn-supprimer, .btn-retour, .btn-maj, .btn-commander {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn-supprimer { background: #e74c3c; }
+.btn-retour { background: #3498db; }
+.btn-maj { background: #f1c40f; color: black; }
+.btn-commander { background: #2ecc71; }

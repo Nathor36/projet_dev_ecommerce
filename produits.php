@@ -87,13 +87,20 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Afficher les produits
 foreach ($produits as $produit) {
+    echo "<div class='produit'>";
     echo "<h2>" . htmlspecialchars($produit['nom']) . "</h2>";
     echo "<p><strong>Description :</strong> " . htmlspecialchars($produit['description']) . "</p>";
     echo "<p><strong>Prix :</strong> " . htmlspecialchars($produit['prix']) . " €</p>";
+
     if (!empty($produit['image'])) {
         echo "<img src='images/" . htmlspecialchars($produit['image']) . "' alt='" . htmlspecialchars($produit['nom']) . "' style='max-width:200px;'><br>";
     }
+
+    // Bouton pour ajouter au panier
+    echo "<form method='POST' action='ajouter_panier.php'>";
+    echo "<input type='hidden' name='id_produit' value='" . intval($produit['id_produit']) . "'>";
+    echo "<input type='number' name='quantite' value='1' min='1' max='" . intval($produit['stock']) . "'>";
+    echo "<button type='submit' class='btn-ajout-panier'>Ajouter au panier</button>";
+    echo "</form>";
+    echo "</div><hr>";
 }
-?>
-</body>
-</html>
