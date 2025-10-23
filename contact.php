@@ -1,4 +1,4 @@
-<!-- filepath: /Applications/MAMP/htdocs/projet_dev_ecommerce/contact.php -->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
