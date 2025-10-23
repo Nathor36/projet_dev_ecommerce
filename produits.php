@@ -40,7 +40,6 @@ require_once 'connexion_bdd.php';  // fichier de connexion et il contien la vari
         <!-- inchalla sa marche c'est les futur boutton pour trié -->
          
         <form method="get" style="display:inline;">
-        <input type="hidden" name="categorie" value="">
         <button type="submit" class="btn-filtre">Afficher tout les Produits</button>
     </form>          
         
