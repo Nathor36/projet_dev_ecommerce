@@ -25,7 +25,7 @@ $commandes = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <title>Mes Commandes - Haapple Store</title>
-    <link rel="stylesheet" href="style_Commande.css">
+    <link rel="stylesheet" href="produit.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
