@@ -89,7 +89,7 @@ foreach ($produits as $p) {
             <li><a href="produits.php">Produits</a></li>
             <li><a href="contact.php">Contact</a></li>
         <li><span>Bonjour, <?= htmlspecialchars($_SESSION['prenom']) ?></span></li>
-        <?php if (isset($_SESSION['id_utilisateur'])): ?>
+        <?php if (isset($_SESSION['user_id'])): ?>
             <li><a href="deconnexion.php">Se déconnecter</a></li>
         <?php else: ?>
             <li><a href="connexion.php">Se connecter</a></li>
