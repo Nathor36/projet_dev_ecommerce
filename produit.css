@@ -137,3 +137,18 @@ body {
     font-size: 20px;
     color: #fff;
   }
+
+  .button.btn-filtre {
+    background: lightblue;
+    border: none;
+    padding: 12px 25px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+
+
+  }
