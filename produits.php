@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <?php 
 session_start(); // On démarre la session PHP  
-
 require_once 'connexion_bdd.php';  // fichier de connexion et il contien la variable $pdo
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -27,7 +26,6 @@ require_once 'connexion_bdd.php';  // fichier de connexion et il contien la vari
                 <li><a href="contact.php">Contact</a></li>
             <?php if (isset($_SESSION['id_utilisateur'])): ?>
             <li><span>Bonjour, <?= htmlspecialchars($_SESSION['prenom']) ?></span></li>
-            <li><a href="mes_commandes.php">Mes commandes</a></li>
             <li><a href="deconnexion.php">Se déconnecter</a></li>
             <?php else: ?>
             <li><a href="connexion.php">Se connecter</a></li>

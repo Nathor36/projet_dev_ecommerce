@@ -1,5 +1,6 @@
-<?php session_start();
-require_once 'connexion_bdd.php'
+<?php
+session_start();
+require_once 'connexion_bdd.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,7 +22,6 @@ require_once 'connexion_bdd.php'
             <li><a href="contact.php">Contact</a></li>
             <?php if (isset($_SESSION['id_utilisateur'])): ?>
             <li><span>Bonjour, <?= htmlspecialchars($_SESSION['prenom']) ?></span></li>
-            <li><a href="mes_commandes.php">Mes commandes</a></li>
             <li><a href="deconnexion.php">Se déconnecter</a></li>
             <?php else: ?>
             <li><a href="connexion.php">Se connecter</a></li>
