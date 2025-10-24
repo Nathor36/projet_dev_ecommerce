@@ -18,7 +18,6 @@ require_once 'connexion_bdd.php';  // fichier de connexion et il contien la vari
     <header class="navbar">
 
         <div class="logo">Haapple Store</div> <!-- sa c'est pour que le nom du site soit a gauche -->
-
         <!-- début de la nav bar ON TOUCHE PAS A SA C'EST FINI (sauf dans la page panier) -->
         <nav>
             <ul>
@@ -26,7 +25,13 @@ require_once 'connexion_bdd.php';  // fichier de connexion et il contien la vari
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="produits.php" class="active">Produits</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="connexion.php">Se connecter</a></li>
+            <?php if (isset($_SESSION['id_utilisateur'])): ?>
+            <li><span>Bonjour, <?= htmlspecialchars($_SESSION['prenom']) ?></span></li>
+            <li><a href="mes_commandes.php">Mes commandes</a></li>
+            <li><a href="deconnexion.php">Se déconnecter</a></li>
+            <?php else: ?>
+            <li><a href="connexion.php">Se connecter</a></li>
+            <?php endif; ?>
                 <li><a href="PagePanier.php"><i class="fas fa-shopping-cart"></i></a></li> <!-- un peu compliquer a écrire mais simple a comprendre c'est pour le que sa aille chercher dans le lien tu peux pas le louper en gros pour le petit logo de panier -->
             </ul>
         </nav>
