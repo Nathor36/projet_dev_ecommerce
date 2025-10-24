@@ -9,7 +9,7 @@ require_once 'connexion_bdd.php';  // fichier de connexion et il contien la vari
     <meta charset="UTF-8">
     <title>Produits</title>
 
-    <link rel="stylesheet" href="produit.css">  <!--relie le ficher css avec se fichier (si quelqu'un lit sa fais un style stp sinon je vais passer ma nuit BOBBY -->
+    <link rel="stylesheet" href="produits.css">  <!--relie le ficher css avec se fichier (si quelqu'un lit sa fais un style stp sinon je vais passer ma nuit BOBBY -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">     <!-- Azouz se lien c'est pour ton panier de mort et le relier au site (oui celui-ci) -->
 </head>
@@ -40,6 +40,7 @@ require_once 'connexion_bdd.php';  // fichier de connexion et il contien la vari
         <!-- inchalla sa marche c'est les futur boutton pour trié -->
          
         <form method="get" style="display:inline;">
+        <input type="hidden" name="categorie" value="">
         <button type="submit" class="btn-filtre">Afficher tout les Produits</button>
     </form>          
         
@@ -75,7 +76,7 @@ $stmt = $pdo->prepare("
     SELECT p.* 
     FROM produits p
     INNER JOIN categories c ON p.id_categorie = c.id_categorie
-    WHERE c.nom = :categorie
+    WHERE c.nom = :categorie    
 ");
 
 // Exécuter la requête en liant le paramètre
@@ -87,11 +88,10 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // Afficher les produits
 foreach ($produits as $produit) {
     echo "<h2>" . htmlspecialchars($produit['nom']) . "</h2>";
-    echo "<p><strong>Catégorie :</strong> " . htmlspecialchars($produit['nom']) . "</p>";
     echo "<p><strong>Description :</strong> " . htmlspecialchars($produit['description']) . "</p>";
     echo "<p><strong>Prix :</strong> " . htmlspecialchars($produit['prix']) . " €</p>";
     if (!empty($produit['image'])) {
-        echo "<img src='images/" . htmlspecialchars($produit['image']) . "' alt='" . htmlspecialchars($produit['nom_produit']) . "' style='max-width:200px;'><br>";
+        echo "<img src='images/" . htmlspecialchars($produit['image']) . "' alt='" . htmlspecialchars($produit['nom']) . "' style='max-width:200px;'><br>";
     }
 }
 ?>
