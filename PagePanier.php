@@ -89,9 +89,12 @@ foreach ($produits as $p) {
             <li><a href="produits.php">Produits</a></li>
             <li><a href="contact.php">Contact</a></li>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <li><a href="connexion.php">Se connecter</a></li>
             <li><a href="PagePanier.php" class="active"><i class="fas fa-shopping-cart"></i></a></li>
 =======
+=======
+>>>>>>> Stashed changes
         <?php if (isset($_SESSION['id_utilisateur'])): ?>
             <li><a href="mes_commandes.php">Mes commandes</a></li>
             <li><a href="deconnexion.php">Se déconnecter</a></li>
