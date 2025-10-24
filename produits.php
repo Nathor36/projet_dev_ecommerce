@@ -13,7 +13,7 @@ require_once 'connexion_bdd.php';  // fichier de connexion et il contien la vari
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">     <!-- Azouz se lien c'est pour ton panier de mort et le relier au site (oui celui-ci) -->
 </head>
-<body>
+<body> 
     <!-- c'est a partir de la c'est le haut du site -->
     <header class="navbar">
 
