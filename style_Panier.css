@@ -263,6 +263,7 @@ button:hover {
 
 tbody {
   min-height: 300px;
+<<<<<<< HEAD
 }
 
 
@@ -328,3 +329,6 @@ body {
 .btn-retour { background: #3498db; }
 .btn-maj { background: #f1c40f; color: black; }
 .btn-commander { background: #2ecc71; }
+=======
+}
+>>>>>>> 86e52dd489deba95b52bc3822097ce31a56c2ced
